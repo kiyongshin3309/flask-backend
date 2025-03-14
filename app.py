@@ -1,9 +1,11 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS  # CORS 추가
 import hgtk
 import time
 import random
 
 app = Flask(__name__)
+CORS(app)
 
 # 연습 문장 리스트 (첨부파일 기반)
 word_list = [
